@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
 		std::cout << tmp_second << " ";
 		++tmp_second;
 	}
-
-    std::cout << std::endl;
+	
+	std::cout << std::endl;  //空格
 	return 0;
 }
