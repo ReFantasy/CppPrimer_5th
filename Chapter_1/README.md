@@ -54,7 +54,9 @@ std::cout << " is " << v1 + v2 <<std::endl;  //同上
 
 ## Ex1.7
 ```
-//源文件 test.cpp
+/*
+*  源文件 test.cpp
+*/
 #include <iostream>
 int main(int argc, char** argv)
 {
