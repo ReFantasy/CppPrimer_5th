@@ -9,6 +9,7 @@ int main((int argc, char** argv)
     return 0;  
 }
 ```
+
 ## Ex1.2
 ```
 //main返回-1，ubuntu17.04 下 查看返回结果为255
@@ -19,6 +20,7 @@ int main((int argc, char** argv)
 }
 ``` 
 <img src="./picture/ex1_1.jpg" width = "50%" /> 
+
 ## Ex1.3
 ```
 int main((int argc, char** argv)
@@ -27,6 +29,7 @@ int main((int argc, char** argv)
     return 0;
 }
 ```
+
 ## Ex1.4
 ```
 int main((int argc, char** argv)
