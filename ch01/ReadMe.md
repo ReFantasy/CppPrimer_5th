@@ -18,5 +18,5 @@ int main()
     return -1;  //main返回-1
 }
 ```
-[pic](./picture/1_1_pic.jpg)
+[pic](./picture/ex1_1.jpg)
 
