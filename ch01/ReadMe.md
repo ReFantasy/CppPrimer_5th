@@ -18,5 +18,5 @@ int main()
     return -1;  //main返回-1
 }
 ```
-![](./picture/ex1_1.jpg = 600)
+![](./picture/ex1_1.jpg = 600x100)
 <img src="./picture/ex1_1.jpg" style="zoom:20%" />
