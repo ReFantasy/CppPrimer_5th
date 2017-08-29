@@ -4,7 +4,7 @@
 ## Ex1.1
 ```
 //main返回0，正常结束
-int main((int argc, char** argv)
+int main(int argc, char** argv)
 {
     return 0;  
 }
@@ -51,3 +51,16 @@ std::cout << "The sum of" << v1;
 std::cout << " and " << v2;   //加上运算对象std::cout，使之成为一条单独完整的语句
 std::cout << " is " << v1 + v2 <<std::endl;  //同上
 ```
+
+## Ex1.7
+```
+#include <iostream>
+int main(int argc, char** argv)
+{
+    /*Hello*/World*/
+    return 0;
+}
+```
+
+**编译输出**
+
