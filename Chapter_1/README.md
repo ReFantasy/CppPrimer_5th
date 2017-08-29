@@ -101,15 +101,15 @@ std::cout << /* "*/" /* "/*" */ ; //正确
 
 ```
 //重构1.9
-int sum = 0;
-for(int val = 50; val<=100; val++)
-{
-    sum += val;
-}
+    int sum = 0;
+    for(int val = 50; val<=100; val++)
+    {
+        sum += val;
+    }
 
 //重构1.10
-for(int val=10; val>=0; val--)
-    std::cout << val << std::endl;
+    for(int val=10; val>=0; val--)
+        std::cout << val << std::endl;
     
 //重构1.11
     int first, second;
