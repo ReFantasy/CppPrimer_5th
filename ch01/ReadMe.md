@@ -18,5 +18,5 @@ int main()
     return -1;  //main返回-1
 }
 ```
-![](./picture/ex1_1.jpg =600x100)
+![img-w150](./picture/ex1_1.jpg)
 
