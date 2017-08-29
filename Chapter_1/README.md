@@ -112,4 +112,27 @@ for(int val=10; val>=0; val--)
     std::cout << val << std::endl;
     
 //重构1.11
+    int first, second;
+    std::cout << "Enter two numbers: ";
+    std::cin >> first >> second;
+    for(;first==second;)
+    {
+        std::cout<<first<<" ";
+        return 0;
+    }
+    for(int tmp_first = first, tmp_second = second; tmp_first<tmp_second; tmp_first++)
+    {
+        std::cout<<tmp_first<<" ";
+    }
+
+    for(;second>first;)
+    {
+        std::cout<<second<<" ";
+        return 0;
+    }
+
+    for(int tmp_first = first, tmp_second = second; tmp_first>=tmp_second; tmp_second++)
+    {
+        std::cout<<tmp_second<<" ";
+    }
 ```
