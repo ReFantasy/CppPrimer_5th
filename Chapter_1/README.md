@@ -69,3 +69,11 @@ int main(int argc, char** argv)
 
 <img src="./picture/ex1_7.jpg" width = "50%" /> 
 
+## Ex1.8
+std::cout << "/*" ;  //正确
+
+std::cout << "*/" ;  //正确
+
+std::cout << /* "*/" */ ; //错误
+	
+std::cout << /* "*/" /* "/*" */ ; //正确
