@@ -19,4 +19,4 @@ int main()
 }
 ```
 ![](./picture/ex1_1.jpg)
-
+<img src="./picture/ex1_1.jpg" style="zoom:50%" />
