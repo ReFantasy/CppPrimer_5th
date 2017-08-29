@@ -19,4 +19,4 @@ int main()
 }
 ```
 ![img-w150](./picture/ex1_1.jpg)
-<img src="./picture/ex1_1.jpg" width = "80%" />
+<img src="./picture/ex1_1.jpg" width = "50%" />
