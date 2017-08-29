@@ -2,7 +2,6 @@
 # Chapter 1
 **以下是第一章的习题解答**
 ## Ex1.1
-
 ```
 //main返回0，正常结束
 int main((int argc, char** argv)
@@ -20,7 +19,6 @@ int main((int argc, char** argv)
 }
 ``` 
 <img src="./picture/ex1_1.jpg" width = "50%" /> 
-
 ## Ex1.3
 ```
 int main((int argc, char** argv)
@@ -29,7 +27,6 @@ int main((int argc, char** argv)
     return 0;
 }
 ```
-
 ## Ex1.4
 ```
 int main((int argc, char** argv)
