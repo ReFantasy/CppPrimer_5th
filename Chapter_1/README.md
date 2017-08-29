@@ -25,7 +25,7 @@ int main((int argc, char** argv)
 ```
 int main((int argc, char** argv)
 {
-    std::cout<<"Hello,World";
+    std::cout<<"Hello,World";  //输出字符串字面值常量
     return 0;
 }
 ```
@@ -37,7 +37,7 @@ int main((int argc, char** argv)
    int v1 = 0;
    int v2 = 0;
    std::cin >> v1 >> v2;
-   std::cout << v1*v2 << std::endl;
-   return 0;
+   std::cout << v1*v2 << std::endl;  //输出乘积
+   return 0;
 }
 ```
