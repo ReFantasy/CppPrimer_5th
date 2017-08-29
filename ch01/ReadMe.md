@@ -2,7 +2,6 @@
 # Chapter 1
 ---
 ### Ex1.1
-
 ```
 //main返回0，正常结束
 int main()
