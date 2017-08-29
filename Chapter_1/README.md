@@ -63,5 +63,6 @@ int main(int argc, char** argv)
 ```
 
 **编译输出**
+
 <img src="./picture/ex1_7.jpg" width = "50%" /> 
 
