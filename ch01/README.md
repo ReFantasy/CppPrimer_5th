@@ -1,8 +1,8 @@
 
 # Chapter 1
----
+
 ### Ex1.1
-syntax on
+
 ```
 //main返回0，正常结束
 int main()
