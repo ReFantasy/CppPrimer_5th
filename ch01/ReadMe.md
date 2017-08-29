@@ -18,5 +18,4 @@ int main()
     return -1;  //main返回-1
 }
 ```
-![img-w150](./picture/ex1_1.jpg)
 <img src="./picture/ex1_1.jpg" width = "50%" />
