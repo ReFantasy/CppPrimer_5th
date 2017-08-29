@@ -26,3 +26,25 @@ int main((int argc, char** argv)
 ## [Ex1.4](./ex1_4.cpp)
 
 ## [Ex1.5](./ex1_5.cpp)
+
+## Ex1.6
+解释下面程序片段是否合法
+```
+std::cout << "The sum of" << v1;
+          << " and " << v2;
+          << " is " << v1 + v2 <<std::endl;
+```
+**答**:不合法。原因：C++中每个分号代表一条语句的结束。这段代码有三条语句，而第二条语句和第三条语句的输出运算符 << 的左侧没有运算对象。
+**修改的方案如下**：
+方案一：
+```
+std::cout << "The sum of" << v1  //去掉v1后面的分号
+          << " and " << v2       //去掉v2后面的分号
+          << " is " << v1 + v2 <<std::endl;
+```
+方案二：
+```
+std::cout << "The sum of" << v1;
+std::cout << " and " << v2;   //加上运算对象std::cout，使之成为一条单独完整的语句
+std::cout << " is " << v1 + v2 <<std::endl;  //同上
+```
