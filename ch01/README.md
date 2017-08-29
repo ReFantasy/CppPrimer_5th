@@ -19,4 +19,4 @@ int main()
     return -1;  //main返回-1
 }
 ```
-<img src="./picture/ex1_1.jpg" width = "50%" />
+<img src="./picture/ex1_1.jpg" width = "50%" /> 
