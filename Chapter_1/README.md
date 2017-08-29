@@ -20,3 +20,22 @@ int main((int argc, char** argv)
 }
 ``` 
 <img src="./picture/ex1_1.jpg" width = "50%" /> 
+
+## Ex1.3
+```
+int main((int argc, char** argv)
+{
+    std::cout<<"Hello,World";
+    return 0;
+}
+```
+
+## Ex1.4
+int main((int argc, char** argv)
+{
+   int v1 = 0;
+   int v2 = 0;
+   std::cin >> v1 >> v2;
+   std::cout << v1*v2 << std::endl;
+   return 0;
+}
