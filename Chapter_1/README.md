@@ -22,7 +22,7 @@ int main((int argc, char** argv)
     return -1;  //main返回-1
 }
 ``` 
-<img src="./picture/ex1_1.jpg" width = "50%" /> 
+<img src="http://a3.qpic.cn/psb?/V10WXPEX3obO4a/yeYvgSwKsa3gbEjaz*wCjc*BzmlTjOI6xz9cRCCuYxM!/b/dD0BAAAAAAAA&bo=NgOQAAAAAAARAJI!&rf=viewer_4" width = "50%" /> 
 
 ## [Ex1.3](./ex1_3.cpp)
 
