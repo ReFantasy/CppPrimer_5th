@@ -15,3 +15,8 @@ short <= int <= long <= long long
 float <= double
 float和double的计算代价相差无几，然而double比float有着更高的精度。对于有些机器，双精度甚至比单精度的运算还要快。
 ```
+
+## Ex2.2
+```
+很明显，double。。。
+```
