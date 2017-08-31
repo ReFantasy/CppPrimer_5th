@@ -2,3 +2,5 @@
 ![](http://a2.qpic.cn/psb?/V10WXPEX3obO4a/B9brEhyvPe3d72*NlZTA.hpIgJ3x9oklYlLMLvrAlNs!/b/dDwBAAAAAAAA&bo=QgGaAQAAAAARB.g!&rf=viewer_4)
 ---
 [第一章  开始](./Chapter_1)
+
+[第二章  变量和基本类型](./Chapter_2)
