@@ -97,3 +97,8 @@ int main()
     std::string local_str; //string类默认初始化未空字符串
 }
 ```
+
+## Ex2.11
+(a) extern int ix = 1024;  // 定义
+(b) int iy; //定义
+(c) extern int iz; //声明
