@@ -113,3 +113,19 @@ int main()
 (d) int 1_or_2 = 1;  //error
 (e) double Double = 3.14;  //right
 ```
+
+## Ex2.13
+```
+int i = 42;
+int main()
+{
+  int i = 100;
+  int j = i;  // j == 100
+}
+```
+
+## Ex2.14
+```
+合法： 输出
+100 5050
+```
