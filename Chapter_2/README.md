@@ -77,3 +77,22 @@ int mounth = 09, day = 07;   //mounth = 09 错误 ，09表示八进制表示，
        十六进制转义字符 \ 后面紧接x，然后后面的数字全部用来作为转义字符，
        直到遇到第一个不在 0~F 之间的字符 （十六进制f表示十进制的15）
 ```
+
+## Ex2.9
+```
+(a) std::cin >> int input_value; //right
+(b) int i = {3.14};  //error 未执行转换，因为存在信息丢失的风险
+(c) double salary = wage = 9999.99;  //right
+(d) int i = 3.14;  // right 信息有丢失
+```
+
+## Ex2.10
+```
+std::string gloval_str;  //空字符串
+int global_int; //0
+int main()
+{
+    int local_int;  //未定义的值
+    std::string local_str; //string类默认初始化未空字符串
+}
+```
