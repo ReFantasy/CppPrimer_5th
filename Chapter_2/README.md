@@ -80,10 +80,11 @@ int mounth = 09, day = 07;   //mounth = 09 错误 ，09表示八进制表示，
 
 ## Ex2.9
 ```
-(a) std::cin >> int input_value; //right
+(a) std::cin >> int input_value; //error
 (b) int i = {3.14};  //error 未执行转换，因为存在信息丢失的风险
-(c) double salary = wage = 9999.99;  //right
-(d) int i = 3.14;  // right 信息有丢失
+(c) double salary = wage = 9999.99;  
+    //入果wage之前有过定义，则这条语句正确，否则错误
+(d) int i = 3.14;  // right 但信息有丢失
 ```
 
 ## Ex2.10
