@@ -210,3 +210,47 @@ if(*p)  //判断p指向的变量的值是否为0
     ip:指向int型的指针
     ip2:int型变量
 ```
+
+## Ex2.26
+```
+(a) const int buf;
+    不合法。常量必须初始化
+(b) int cnt = 0;
+    合法
+(c) const int sz = cnt;
+    合法
+(d) ++cnt;++sz;
+    ++cnt合法。++sz不合法。
+```
+
+## Ex2.27
+```
+(a) int i = -1, &r = 0;  //不合法 r必须指向一个对象
+(b) int *const p2 = &i2;  //i2若非常量合法 否则 不合法
+(c) const int i = -1, &r = 0;  //合法
+(d) const int *const p3 = &i2; //合法
+(e) const int *p1 = &i2;  //合法
+(f) const int &const r2; //不合法。引用不是对象，&const r2语法错误。而且r2没有初始化
+(g) const int i2 = i, &r = i;  //合法
+```
+
+## Ex2.28
+```
+int i, *const cp;       // illegal, cp must initialize.
+const int ic, &r = ic;  // illegal, ic must initialize.
+int *p1, *const p2;     // illegal, p2 must initialize.
+const int *const p3;    // illegal, p3 must initialize.
+const int *p;           // legal. a pointer to const int.
+```
+
+## Ex2.29
+```
+i = ic;     // legal.
+p1 = p3;    // illegal. p3 is a pointer to const int.
+p1 = &ic;   // illegal. ic is a const int.
+p3 = &ic;   // illegal. p3 is a const pointer.
+p2 = p1;    // illegal. p2 is a const pointer.
+ic = *p3;   // illegal. ic is a const int.
+
+感觉题目有问题。
+```
