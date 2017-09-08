@@ -254,3 +254,21 @@ ic = *p3;   // illegal. ic is a const int.
 
 感觉题目有问题。
 ```
+
+## Ex2.30
+```
+const int v2 = 0;//顶层
+int v1 = v2; //普通变量
+int *p1 = &v1, &r1 = v1;  //既非顶层也非底层
+const int *p2 = &v2, *const p3 = &i, &r2 = v2;
+//p2 底层，p3既是顶层又是底层，r2底层引用
+```
+
+## Ex2.31
+```
+r1 = v2; //合法 v2的顶层const被忽略
+p1 = p2; //非法 p2是底层const 而p1不是
+p2 = p1;//p2的底层const被忽略
+p1 = p3; //非法 p3是底层const p1不是
+p2 = p3; //合法
+```
