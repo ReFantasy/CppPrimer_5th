@@ -272,3 +272,9 @@ p2 = p1;//p2的底层const被忽略
 p1 = p3; //非法 p3是底层const p1不是
 p2 = p3; //合法
 ```
+
+## Ex2.32
+```
+int null = 0, *p = null;//非法
+修改为：int null = 0, *p = nullptr;
+```
