@@ -288,3 +288,12 @@ d = 42; //错误， d为int* 与字面值42类型不一致
 e = 42; //错误， e为const int*，与字面值42类型不一致
 g = 42; //错误， g是一个 const int &,对常量的引用不能被赋值
 ```
+
+## Ex2.35
+```
+const int i = 42;
+auto j = i; j int
+const auto &k = i; k const int &
+auto *p = &i; p const int *
+const auto j2 = i, &k2 = i; j2 const int ,k2 const int & 
+```
