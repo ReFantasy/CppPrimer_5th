@@ -297,3 +297,30 @@ const auto &k = i; k const int &
 auto *p = &i; p const int *
 const auto j2 = i, &k2 = i; j2 const int ,k2 const int & 
 ```
+
+## Ex2.36
+```
+int a = 3, b = 4;
+decltype(a) c = a;  //c int
+decltype((b)) d = a; //d int&
+++c; //4
+++d; //4
+```
+
+## Ex2.37
+```
+int a = 3, b = 4;
+decltype(a) c = a; //c int
+decltype(a = b) d = a; //d 对a的引用
+```
+
+## Ex2.38
+```
+int i = 0, &r = i;
+// same
+auto a = i;
+decltype(i) b = i;
+// different
+auto c = r; //c int
+decltype(r) d = i; //d int&
+```
