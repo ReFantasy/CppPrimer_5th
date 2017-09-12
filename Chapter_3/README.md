@@ -46,3 +46,19 @@ v5 一个10一个42
 v6 10个空string
 v7 10个"hi"
 ```
+
+## [Ex3.14](./ex3_14.cpp)
+
+## [Ex3.15](./ex3_15.cpp)
+
+## [Ex3.17](./ex3_17.cpp)
+
+## Ex3.19
+```
+    vector<int> ivec1(10, 42);
+    vector<int> ivec2{42, 42, 42, 42, 42, 42, 42, 42, 42, 42};
+    vector<int> ivec3;
+    for (int i = 0; i != 10; ++i) ivec3.push_back(42);
+```
+
+## [Ex3.20](./ex3_20.cpp)
