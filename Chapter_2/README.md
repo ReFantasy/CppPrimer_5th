@@ -88,7 +88,7 @@ int mounth = 09, day = 07;   //mounth = 09 错误 ，09表示八进制表示，
 ```
 
 ## Ex2.10
-```
+```C++
 std::string gloval_str;  //空字符串
 int global_int; //0
 int main()
@@ -115,7 +115,7 @@ int main()
 ```
 
 ## Ex2.13
-```
+```C++
 int i = 42;
 int main()
 {
@@ -167,7 +167,7 @@ int i = 0, &r1 = i;  double d = 0, &r2 = d;
 ```
 
 ## Ex2.20
-```
+```C++
 int i = 42;
 int *p1 = &i;  //定义指向i的指针
 *p1 = *p1 * *p1; //计算i的平方并赋值给i
