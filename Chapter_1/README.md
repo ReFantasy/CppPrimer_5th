@@ -73,7 +73,7 @@ int main(int argc, char** argv)
 <img src="http://a2.qpic.cn/psb?/V10WXPEX3obO4a/tAHg.vT1c6YY3*lW0ik.l4IHkE0JRLKtzDSMRe53tXw!/b/dDwBAAAAAAAA&bo=dgPmAAAAAAARAKQ!&rf=viewer_4" width = "50%" /> 
 
 ## Ex1.8
-```C++
+```
 std::cout << "/*" ;  //正确
 
 std::cout << "*/" ;  //正确
