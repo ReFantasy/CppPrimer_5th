@@ -22,7 +22,7 @@ float和double的计算代价相差无几，然而double比float有着更高的�
 ```
 
 ## Ex2.3 & Ex2.4
-```
+```C++
 unsigned u = 10, u2 = 42;
 std::cout << u2 - u << std::endl;  //result 32
 std::cout << u - u2 << std::endl;  //-32转化为无符号数 result 4294967264 (unsigned u 大小为 4 Byte)
@@ -50,7 +50,7 @@ Note:有符号和无符号混合运算时，默认先将有符号隐式转换为
 ```
 
 ## Ex2.6
-```
+```C++
 int mounth = 9, day = 7;     //十进制表示
 int mounth = 09, day = 07;   //mounth = 09 错误 ，09表示八进制表示，八进制每位最大值为7
 ```
@@ -99,14 +99,14 @@ int main()
 ```
 
 ## Ex2.11
-```
+```C++
 (a) extern int ix = 1024;  // 定义
 (b) int iy; //定义
 (c) extern int iz; //声明
 ```
 
 ## Ex2.12
-```
+```C++
 (a) int double = 3.14;  //error
 (b) int _;  //right
 (c) int catch-22;  //error
@@ -131,7 +131,7 @@ int main()
 ```
 
 ## Ex2.15
-```
+```C++
 (a) int ival = 1.01;
     语法正确，数值有损失
 (b) int &rvall = 1.01;
@@ -143,7 +143,7 @@ int main()
 ```
 
 ## Ex2.16
-```
+```C++
 int i = 0, &r1 = i;  double d = 0, &r2 = d;
 (a) r2 = 3.1415926;
     合法，等价于 d = 3.1415926
@@ -174,7 +174,7 @@ int *p1 = &i;  //定义指向i的指针
 ```
 
 ## Ex2.21
-```
+```C++
 int i = 0;
 (a) double *dp = &i;  //非法，数据类型不匹配
 (b) int *ip = i;  //非法，不能将int型的值直接赋值给指针
@@ -212,7 +212,7 @@ if(*p)  //判断p指向的变量的值是否为0
 ```
 
 ## Ex2.26
-```
+```C++
 (a) const int buf;
     不合法。常量必须初始化
 (b) int cnt = 0;
@@ -224,7 +224,7 @@ if(*p)  //判断p指向的变量的值是否为0
 ```
 
 ## Ex2.27
-```
+```C++
 (a) int i = -1, &r = 0;  //不合法 r必须指向一个对象
 (b) int *const p2 = &i2;  //i2若非常量合法 否则 不合法
 (c) const int i = -1, &r = 0;  //合法
@@ -235,7 +235,7 @@ if(*p)  //判断p指向的变量的值是否为0
 ```
 
 ## Ex2.28
-```
+```C++
 int i, *const cp;       // illegal, cp must initialize.
 const int ic, &r = ic;  // illegal, ic must initialize.
 int *p1, *const p2;     // illegal, p2 must initialize.
@@ -244,7 +244,7 @@ const int *p;           // legal. a pointer to const int.
 ```
 
 ## Ex2.29
-```
+```C++
 i = ic;     // legal.
 p1 = p3;    // illegal. p3 is a pointer to const int.
 p1 = &ic;   // illegal. ic is a const int.
@@ -256,7 +256,7 @@ ic = *p3;   // illegal. ic is a const int.
 ```
 
 ## Ex2.30
-```
+```C++
 const int v2 = 0;//顶层
 int v1 = v2; //普通变量
 int *p1 = &v1, &r1 = v1;  //既非顶层也非底层
@@ -290,7 +290,7 @@ g = 42; //错误， g是一个 const int &,对常量的引用不能被赋值
 ```
 
 ## Ex2.35
-```
+```C++
 const int i = 42;
 auto j = i; j int
 const auto &k = i; k const int &
@@ -299,7 +299,7 @@ const auto j2 = i, &k2 = i; j2 const int ,k2 const int &
 ```
 
 ## Ex2.36
-```
+```C++
 int a = 3, b = 4;
 decltype(a) c = a;  //c int
 decltype((b)) d = a; //d int&
@@ -308,14 +308,14 @@ decltype((b)) d = a; //d int&
 ```
 
 ## Ex2.37
-```
+```C++
 int a = 3, b = 4;
 decltype(a) c = a; //c int
 decltype(a = b) d = a; //d 对a的引用
 ```
 
 ## Ex2.38
-```
+```C++
 int i = 0, &r = i;
 // same
 auto a = i;
