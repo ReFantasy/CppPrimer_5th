@@ -4,6 +4,6 @@
 
 EX为题号，灰色阴影部分为答案，其余为题目或其它说明
 
-```C
+```C++
 int main(int argv, char* argv[])
 ```
