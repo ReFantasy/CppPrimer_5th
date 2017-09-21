@@ -5,7 +5,7 @@
 *EX为题号，灰色阴影部分为答案，其余为题目或其它说明*
 
 ## Ex1.1
-```
+```C++
 //main返回0，正常结束
 int main(int argc, char** argv)
 {
