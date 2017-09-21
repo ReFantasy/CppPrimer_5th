@@ -12,8 +12,8 @@ int main()
 {
     cout << "Please enter an number:";
     int n;
-    cin>>n;
-    cout<<"|"<<n<<"|is:"<<abs(n)<<endl;
+    cin >> n;
+    cout << "|" << n << "|is:" << abs(n) << endl;
 
     return 0;
 }
