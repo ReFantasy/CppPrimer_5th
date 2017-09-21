@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 ```
 
 ## Ex1.2
-```
+```C++
 //main返回-1，ubuntu17.04 下 查看返回结果为255
 //可见 ubuntu下系统接受的主函数的返回值类型是非负整型
 int main((int argc, char** argv)
@@ -32,7 +32,7 @@ int main((int argc, char** argv)
 
 ## Ex1.6
 解释下面程序片段是否合法
-```
+```C++
 std::cout << "The sum of" << v1;
           << " and " << v2;
           << " is " << v1 + v2 <<std::endl;
@@ -42,21 +42,21 @@ std::cout << "The sum of" << v1;
 **修改的方案如下**：
 
 方案一：
-```
+```C++
 std::cout << "The sum of" << v1  //去掉v1后面的分号
           << " and " << v2       //去掉v2后面的分号
           << " is " << v1 + v2 <<std::endl;
 ```
 
 方案二：
-```
+```C++
 std::cout << "The sum of" << v1;
 std::cout << " and " << v2;   //加上运算对象std::cout，使之成为一条单独完整的语句
 std::cout << " is " << v1 + v2 <<std::endl;  //同上
 ```
 
 ## Ex1.7
-```
+```C++
 /*
 *  源文件 test.cpp
 */
@@ -73,7 +73,7 @@ int main(int argc, char** argv)
 <img src="http://a2.qpic.cn/psb?/V10WXPEX3obO4a/tAHg.vT1c6YY3*lW0ik.l4IHkE0JRLKtzDSMRe53tXw!/b/dDwBAAAAAAAA&bo=dgPmAAAAAAARAKQ!&rf=viewer_4" width = "50%" /> 
 
 ## Ex1.8
-```
+```C++
 std::cout << "/*" ;  //正确
 
 std::cout << "*/" ;  //正确
@@ -99,7 +99,7 @@ std::cout << /* "*/" /* "/*" */ ; //正确
 
 利用for循环 重构练习1.9到1.11的练习题
 
-```
+```C++
 //重构1.9
     int sum = 0;
     for(int val = 50; val<=100; val++)
