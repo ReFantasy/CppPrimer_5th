@@ -1,4 +1,5 @@
 //矩阵链乘
+```C++
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -65,3 +66,4 @@ int main(int argc, char** argv)
 	matrixChain.compute();
 	matrixChain.printResult(1, matrix.size()-1);
 }
+```
