@@ -25,4 +25,6 @@ EX为题号，灰色阴影部分为答案，其余为题目或其它说明
 (d) double square (double x) { return x * x; }
 ```
 
-## [Ex6.3&&Ex6.4](./6_4.cpp)
+## [Ex6.3 && Ex6.4](./6_4.cpp)
+
+## [Ex6.5](./6_5.cpp)
