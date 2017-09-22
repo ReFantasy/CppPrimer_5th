@@ -2,4 +2,5 @@
 git add .
 git commit -m "shell commit"
 git push origin master
-"309741309@qq.com"
+$1
+$2
