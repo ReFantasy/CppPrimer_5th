@@ -1,4 +1,4 @@
 #!/bin/sh
 git add .
 git commit -m "shell commit"
-git push origin master
+"309741309@qq.com"|git push origin master
