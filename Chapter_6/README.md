@@ -101,6 +101,6 @@ void print(const (&ia)[10]);
 ## [Ex6.27](./6_27.cpp)
 
 ## Ex6.28
-```
+```C++
 string &
 ```
