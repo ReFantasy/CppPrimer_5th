@@ -132,3 +132,26 @@ string &
 (b) 完全匹配
 (c) 匹配， ht = 14, wd = '*', backgrnd = ' '
 ```
+
+## Ex6.43
+```
+全部放在头文件
+```
+
+## Ex6.44
+```C++
+#include <iostream>
+#include <string>
+
+using std::string;
+
+inline bool isShorter(const string& s1, const string& s2)
+{
+    return s1.size() < s2.size();
+}
+
+int main()
+{
+    std::cout << isShorter("shanghai", "beijing") << std::endl;
+}
+```
