@@ -64,3 +64,5 @@ so easy.I do not want to explain.
 ```C++
 bool is_empty(const string& s) { return s.empty(); }
 ```
+
+## [Ex6.17](./6_17.cpp)
