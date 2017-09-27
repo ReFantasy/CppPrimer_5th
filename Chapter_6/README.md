@@ -66,3 +66,9 @@ bool is_empty(const string& s) { return s.empty(); }
 ```
 
 ## [Ex6.17](./6_17.cpp)
+
+## Ex6.18
+```C++
+(a) bool compare(const matrix &m1, const matrix &m1);
+(b) vector<int>::iterator change_val(int, vector<int>::iterator);
+```
