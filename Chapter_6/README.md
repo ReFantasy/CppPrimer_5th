@@ -95,3 +95,5 @@ bool is_empty(const string& s) { return s.empty(); }
 ```C++
 void print(const (&ia)[10]);
 ```
+
+## [Ex6.25 && Ex6.26](./6_25.cpp)
