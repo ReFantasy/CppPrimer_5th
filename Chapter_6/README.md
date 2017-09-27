@@ -47,3 +47,20 @@ void f(T);
 void f(&T);
 不懂这种声明，难道不应该是 void f(T&);
 ```
+
+## Ex6.15
+```
+why is s a reference to const but occurs is a plain reference?
+因为s明显没必要改变，而occurs是要记录出现的次数，值需要改变
+
+Why are these parameters references, but the char parameter c is not?
+因为一个char很小，比起引用，直接复制过来，效率更高
+
+Why are these parameters references, but the char parameter c is not?
+so easy.I do not want to explain.
+```
+
+## Ex6.16
+```C++
+bool is_empty(const string& s) { return s.empty(); }
+```
