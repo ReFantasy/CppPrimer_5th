@@ -72,3 +72,17 @@ bool is_empty(const string& s) { return s.empty(); }
 (a) bool compare(const matrix &m1, const matrix &m1);
 (b) vector<int>::iterator change_val(int, vector<int>::iterator);
 ```
+
+## Ex6.19
+```
+(a) illegal, only one parameter.
+(b) legal. 
+(c) legal. 
+(d) legal.
+```
+
+## Ex6.20
+```
+常量引用：当不需要改变数据的值的时候，最好都声明为常量引用
+常量引用改为普通引用，不仅仅缩小了函数参数的范围，无法对常量进行引用，还容易导致错误，改变了不应该改变的值。
+```
