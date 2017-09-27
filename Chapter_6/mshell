@@ -1,5 +1,4 @@
 #!/bin/sh
 git add .
-git reset head mshell
 git commit -m "shell commit"
 git push origin master
