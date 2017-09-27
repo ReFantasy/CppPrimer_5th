@@ -92,6 +92,6 @@ bool is_empty(const string& s) { return s.empty(); }
 ## [Ex6.22](./6_22.cpp)
 
 ## Ex6.24
-```Java
+```C++
 void print(const (&ia)[10]);
 ```
