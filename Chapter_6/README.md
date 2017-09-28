@@ -190,3 +190,39 @@ int main(int argc, char *argv[])
 	return EXIT_SUCCESS;
 }
 ```
+
+## Ex6.55 && Ex6.56
+```C++
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int madd(int a, int b) 
+{ 
+	return a + b; 
+}
+int subtract(int a, int b) 
+{
+	return a - b; 
+}
+int multiply(int a, int b)
+{ 
+	return a * b; 
+}
+int divide(int a, int b)
+{ 
+	return b != 0 ? a / b : 0;
+}
+
+int main(int argc, char *argv[])
+{	
+	vector<int(*)(int a, int b)>  pfunc{madd, subtract, multiply, divide};
+	for (auto &f : pfunc)
+	{
+		cout << f(9, 3) << endl;
+	}
+	
+
+	return 0;
+}
+```
