@@ -172,7 +172,6 @@ int main()
 ```C++
 #include <iostream>
 #include <vector>
-using namespace std;
 
 int foo(int a, int b)
 {
@@ -183,8 +182,8 @@ typedef int(*pfoo)(int a, int b);
 
 int main(int argc, char *argv[])
 {	
-	vector<int(*)(int a, int b)>  a;
-	vector<pfoo> b;
+	std::vector<int(*)(int a, int b)>  a;
+	std::vector<pfoo> b;
 	a.push_back(foo);
 	b.push_back(foo);
 
