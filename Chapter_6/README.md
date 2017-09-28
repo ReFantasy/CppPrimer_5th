@@ -155,3 +155,9 @@ int main()
     std::cout << isShorter("shanghai", "beijing") << std::endl;
 }
 ```
+
+## Ex6.52
+```
+(a) 提升
+(b) 转换
+```
