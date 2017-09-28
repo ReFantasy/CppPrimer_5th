@@ -167,3 +167,27 @@ int main()
 (a)(b)前后两句分别是普通引用和底层const引用，没有问题
 (c)前后两句都是调用int calc(char*, char*);
 ```
+
+## Ex6.54
+```C++
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int foo(int a, int b)
+{
+	return 0;
+}
+
+typedef int(*pfoo)(int a, int b);
+
+int main(int argc, char *argv[])
+{	
+	vector<int(*)(int a, int b)>  a;
+	vector<pfoo> b;
+	a.push_back(foo);
+	b.push_back(foo);
+
+	return EXIT_SUCCESS;
+}
+```
