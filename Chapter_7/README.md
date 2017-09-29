@@ -30,4 +30,5 @@ class默认private
 
 ## Ex7.19
 *public include: constructors, getName(), getAddress().
+
 *private include: name, address.
