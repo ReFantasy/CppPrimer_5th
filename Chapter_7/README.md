@@ -213,3 +213,19 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+
+## Ex7.31
+```C++
+class Y;
+class X
+{
+public:
+	Y *py = nullptr;
+};
+
+class Y
+{
+public:
+	X x;
+};
+```
