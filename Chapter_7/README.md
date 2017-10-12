@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-Ex 7.27
+## Ex7.27
 ```C++
 #include <iostream>
 #include <string>
