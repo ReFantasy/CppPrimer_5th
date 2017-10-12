@@ -183,13 +183,13 @@ inline char Screen::get(const pos r, const pos c)const
 	return m_contents[r*m_width + c];
 }
 
-Screen& Screen::display(std::ostream &os)
+inline Screen& Screen::display(std::ostream &os)
 {
 	do_display(os);
 	return *this;
 }
 
-const Screen& Screen::display(std::ostream &os)const
+inline const Screen& Screen::display(std::ostream &os)const
 {
 	do_display(os);
 	return *this;
