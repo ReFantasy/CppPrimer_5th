@@ -236,3 +236,13 @@ int main()
 ```
 
 ## [Ex11.33](./11_33.cpp)
+
+## Ex11.34
+```
+编译错误
+const string& transform(const string &s, const map<string, string> &m);
+参数为const，而使用下标时map，当map中不存在的关键字，需要写入数据，所以编译错误。
+将 const map<string, string> &m，改为： map<string, string> &m
+当转换的单词不在转换列表，map会创建该关键字，关键字的值为string的默认初始化值空。
+此时转换的文本中，但是转换单词列表出现的单词，转换正确，转换列表没有的单词全部跳过（因为string初始化为空字符串）。
+```
