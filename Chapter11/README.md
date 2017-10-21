@@ -26,3 +26,85 @@ map<string, list<int>> m;
 
 ## [Ex11.12](./11_12.cpp)
 
+## Ex11.14
+```C++
+#include <iostream>
+#include <vector>
+#include <string>
+#include <map>
+#include <iomanip>
+using namespace std;
+
+class CFamily
+{
+public:
+	CFamily() {}
+	CFamily(string family_name)
+	{
+		family_children = { { family_name, vector<pair<string, string>>()} };
+	}
+public:
+	void addNewFamily(string new_family_name)
+	{
+		family_children[new_family_name] = vector<pair<string, string>>();
+	}
+	void addChild(string family_name, string child_name, string birthday = "1949-10-01")
+	{
+		const auto& mv = family_children[family_name];
+		if (mv.empty())
+		{
+			addNewFamily(family_name);
+			auto& vec = family_children[family_name];
+			vec.push_back(make_pair(child_name, birthday));
+		}
+		else
+		{
+			auto& vec = family_children[family_name];
+			vec.push_back(make_pair(child_name, birthday));
+		}
+
+	}
+
+	void printFamily()
+	{
+		for (const auto &f : family_children)
+		{
+			cout << "family name: " << f.first << endl;
+			cout << "family children: " << endl;
+			for (const auto& name : f.second)
+			{
+				cout <<  "名字：" << f.first << left << setw(8) << name.first  << "  生日：" << name.second << " ";
+				cout << endl;
+			}
+			cout << endl;
+			cout << endl;
+		}
+	}
+private:
+	map<string, vector<pair<string, string>>> family_children;
+};
+
+int main(int argc, char *argv[])
+{
+	CFamily family;
+
+	//先添加家庭姓氏，再逐一添加孩子名
+	family.addNewFamily("李");
+	family.addChild("李", "大孩", "1992-12-21");
+	family.addChild("李", "二孩", "1997-03-21");
+	family.addChild("李", "三孩", "1993-08-15");
+
+	//直接添加孩子名(自动创建家庭)
+	family.addChild("王", "明", "1994-10-01");
+	family.addChild("王", "翠花", "1994-11-12");
+	family.addChild("王", "狗蛋", "1998-06-13");
+
+	family.addChild("周", "杰伦", "1979-01-18");
+
+	//输出所有的家庭
+	family.printFamily();
+	cout << endl;
+	return 0;
+}
+
+```
