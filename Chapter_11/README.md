@@ -194,3 +194,43 @@ int main(int argc, char *argv[])
 }
 
 ```
+
+## Ex11.31
+```C++
+#include <iostream>
+#include <map>
+#include <string>
+
+using std::string;
+
+int main()
+{
+	std::multimap<string, string> authors{
+		    { "pezy", "LeetCode" },{ "pezy", "CP5" },{ "pezy", "CP5" },
+			{ "wang", "FTP" },{ "wang", "CPP-Concurrency" },
+			{ "alan", "DMA" },{ "alan", "CLRS" },
+	};
+	// want to delete an element that author is [pezy], work is [CP5].
+	string del_name = "pezy";
+	string del_work = "CP5";
+	string author = "pezy";
+	string work = "CP5";
+
+	for (auto iter = authors.find(del_name); iter != authors.end() && iter->first == del_name; )
+	{
+		if (iter->second == del_work)
+		{
+			iter = authors.erase(iter);
+		}
+		else
+		{
+			iter++;
+		}
+	}
+
+
+
+	for (const auto& author : authors)
+		std::cout << author.first << " " << author.second << std::endl;
+}
+```
