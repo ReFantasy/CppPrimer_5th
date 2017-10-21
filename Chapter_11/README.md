@@ -238,7 +238,7 @@ int main()
 ## [Ex11.33](./11_33.cpp)
 
 ## Ex11.34
-```
+```C++
 编译错误
 const string& transform(const string &s, const map<string, string> &m);
 参数为const，而使用下标时map，当map中不存在的关键字，需要写入数据，所以编译错误。
