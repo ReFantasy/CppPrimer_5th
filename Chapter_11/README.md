@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
 ```
 
 ## Ex11.15
-```
+```C++
 map<int, vector<int>>;
 mapped_type: vector<int>
 key_type: int
