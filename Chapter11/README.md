@@ -167,10 +167,7 @@ int main(int argc, char *argv[])
 ```C++
 //decltype获取函数的类型，传入set.我们可以直接定义函数指针类型，传入set.
 #include <iostream>
-#include <vector>
 #include <string>
-#include <list>
-#include <map>
 #include <set>
 using namespace std;
 class Sales_data
