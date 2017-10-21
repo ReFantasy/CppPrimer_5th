@@ -110,3 +110,11 @@ int main(int argc, char *argv[])
 }
 
 ```
+
+## Ex11.15
+```
+map<int, vector<int>>;
+mapped_type: vector<int>
+key_type: int
+value_type: pair<int, vector<int>>
+```
