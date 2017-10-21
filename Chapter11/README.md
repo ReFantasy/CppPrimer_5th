@@ -46,7 +46,9 @@ public:
 public:
 	void addNewFamily(string new_family_name)
 	{
-		family_children[new_family_name] = vector<pair<string, string>>();
+		const auto& mv = family_children[new_family_name];
+		if(mv.empty())
+			family_children[new_family_name] = vector<pair<string, string>>();
 	}
 	void addChild(string family_name, string child_name, string birthday = "1949-10-01")
 	{
