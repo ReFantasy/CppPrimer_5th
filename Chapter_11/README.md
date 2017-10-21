@@ -168,3 +168,29 @@ int main(int argc, char *argv[])
 如果插入的元素不存在，则插入，sizt_t=0，然后将其值加一，单词的个数为 1，正确。
 如果插入的元素已经存在，同样也将map的键值加一，该单词的个数递增1，正确。
 ```
+
+## Ex11.23
+```C++
+#include <iostream>
+#include <string>
+#include <map>
+using namespace std;
+
+
+int main(int argc, char *argv[])
+{
+	multimap<string, string> name;
+
+	name.insert({ "王", "二" });
+	name.insert({ "王", "三" });
+	name.insert({ "王", "四" });
+
+	for (const auto &mpair : name)
+	{
+		cout << mpair.first << " " << mpair.second << endl;
+	}
+
+	return 0;
+}
+
+```
