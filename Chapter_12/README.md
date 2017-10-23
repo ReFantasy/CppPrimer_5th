@@ -88,3 +88,28 @@ private:
 
 ## Ex12.8
 语法上没错。指针类型隐式转换为布尔类型，导致内存泄漏。
+
+## Ex12.10
+```C++
+//正确
+#include <iostream>
+#include <vector>
+#include <memory>
+using namespace std;
+
+void process(std::shared_ptr<int> ptr)
+{
+	std::cout << "inside the process function:" << ptr.use_count() << "\n";
+}
+
+int main()
+{
+	shared_ptr<int> p(new int(42));
+	cout << "in main,p.use_count: " <<p.use_count() << endl;
+
+	process(shared_ptr<int>(p));
+
+	cout << "after process,p.use_count: " << p.use_count() << endl;
+	return 0;
+}
+```
