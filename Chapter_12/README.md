@@ -157,6 +157,44 @@ IntP p4(new int(2048)); //right
 IntP p5(p2.get()); //同一块内存被p2、p5释放两遍
 ```
 
+## Ex12.23
+```C++
+#include <iostream>
+#include <string>
+using namespace std;
+
+char* stringLink(const char *ch1, const char *ch2)
+{
+	int n = strlen(ch1) + strlen(ch2) - 1;
+	char *p = new char[n];
+	char *tmp = p;
+
+	for (const char*ch = ch1; (*ch) != '\0'; ch++, tmp++)
+		(*tmp) = (*ch);
+
+	for (const char*ch = ch2; (*ch) != '\0'; ch++, tmp++)
+		(*tmp) = (*ch);
+
+	(*tmp) = '\0';
+
+	return p;
+}
+
+char* stringLink(const string &s1, const string &s2)
+{
+	return stringLink(s1.data(), s2.data());
+}
+
+int main()
+{
+	cout << stringLink("hello,", "world!") << endl;
+	cout << stringLink(string("string_1,"), string("string_2!")) << endl;
+	
+	return 0;
+}
+
+```
+
 
 
 
