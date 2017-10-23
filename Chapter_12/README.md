@@ -197,6 +197,41 @@ int main()
 
 ```
 
+## Ex12.26
+```C++
+#include <iostream>
+#include <string>
+#include <memory>
+using namespace std;
+
+
+
+int main()
+{
+	int n = 10;
+	allocator<string> stralloc;
+	string *beg = stralloc.allocate(n);
+	string *p = beg;
+
+	string s;
+	while (cin >> s && p != (beg + n))
+	{
+		stralloc.construct(p++, s); //构造对象
+	}
+
+	size_t size = p - beg; //记录已经构造的对象个数
+
+	for (size_t i = 0; i < size; i++) //析构所有构造的对象
+		stralloc.destroy(beg + i);
+
+	stralloc.deallocate(beg, n); //释放申请的内存
+	return 0;
+}
+
+
+
+```
+
 
 
 
