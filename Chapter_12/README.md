@@ -119,3 +119,31 @@ int main()
 process创建一个新的智能指针，和函数外的智能指针共享同一块内存，当process执行结束，内存被释放。
 外部智能指针销毁时，则会delete一块已经被释放的内存空间，抛出一个异常值。
 ```
+
+## Ex12.12
+```C++
+#include <iostream>
+#include <vector>
+#include <memory>
+using namespace std;
+
+void process(std::shared_ptr<int> ptr)
+{
+	std::cout << "inside the process function:" << ptr.use_count() << "\n";
+}
+
+int main()
+{
+	auto p = new int();
+	auto sp = make_shared<int>();
+	//process(sp);                 //正确。sp的引用计数加一
+	//process(new int());          //编译错误，不能隐式转换
+	//process(p);                  //编译错误，不能隐式转换
+	//process(shared_ptr<int>(p)); //创建智能指针，函数调用结束后，释放p所指向的内存，p成为空悬指针
+	
+	return 0;
+}
+
+
+
+```
