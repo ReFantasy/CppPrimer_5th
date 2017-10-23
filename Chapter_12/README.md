@@ -165,7 +165,8 @@ using namespace std;
 
 char* stringLink(const char *ch1, const char *ch2)
 {
-	int n = strlen(ch1) + strlen(ch2) - 1;
+        
+	int n = strlen(ch1) + strlen(ch2) - 1;  //存储两个字符串需要的内存	
 	char *p = new char[n];
 	char *tmp = p;
 
@@ -175,13 +176,14 @@ char* stringLink(const char *ch1, const char *ch2)
 	for (const char*ch = ch2; (*ch) != '\0'; ch++, tmp++)
 		(*tmp) = (*ch);
 
-	(*tmp) = '\0';
+	(*tmp) = '\0';  //字符串以空字符结束
 
 	return p;
 }
 
 char* stringLink(const string &s1, const string &s2)
 {
+        //string.data()返回string中首个字符对象的地址，并且以空字符'\0'结束
 	return stringLink(s1.data(), s2.data());
 }
 
