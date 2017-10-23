@@ -143,7 +143,33 @@ int main()
 	
 	return 0;
 }
-
-
-
 ```
+
+## Ex12.17
+```C++
+int ix = 1024, *pi = &ix, *pi2 = new int(2048);
+typedef unique_ptr<int> IntP;
+IntP p0(ix);  //参数类型错误
+IntP p1(pi);  //编译通过，然而运行时错误，delete一块不是通过new申请的内存
+IntP p2(pi2); //编译通过，当p2销毁时，p2所指的内存被释放，pi2成为野指针
+IntP p3(&ix); //同p1
+IntP p4(new int(2048)); //right
+IntP p5(p2.get()); //同一块内存被p2、p5释放两遍
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
