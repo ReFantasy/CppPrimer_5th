@@ -56,7 +56,7 @@ local -> *heap
 三次。*accum  item1  item2.*
 
 ## Ex13.13
-```
+```C++
 #include <iostream>
 #include <vector>
 using namespace std;
