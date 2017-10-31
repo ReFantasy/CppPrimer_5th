@@ -56,7 +56,7 @@ local -> *heap
 三次。*accum  item1  item2.*
 
 ## Ex13.13
-```C++
+```
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -214,3 +214,137 @@ int main()
 
 ## Ex13.17
 如上。
+
+## [Ex13.18](./13_18.h)
+
+## Ex13.19
+不需要
+```C++
+class Employee
+{
+public:
+	Employee() :id(-1) {}
+	Employee(const string &new_name)
+		:name(new_name)
+	{
+		id = ++ID;
+	}
+	Employee(const Employee &) = delete;
+	Employee& operator=(const Employee &) = delete;
+public:
+	std::string name;
+	int id;
+private:
+	static int ID;
+};
+
+int Employee::ID = 0;
+```
+
+## Ex13.22
+```C++
+class HasPtr
+{
+public:
+	HasPtr(const std::string &s = std::string())
+		:ps(new std::string(s)), i(0) {}
+
+	HasPtr(const HasPtr & hp)
+		:ps(new std::string(*hp.ps)), i(hp.i) {}
+		
+    //拷贝赋值运算符
+	HasPtr& operator=(const HasPtr &hp)
+	{
+		if (ps != nullptr)
+			delete ps;
+		ps = new string(*hp.ps);
+		i = hp.i;
+		return *this;
+	}
+	
+    //添加析构函数
+    ~HasPtr()
+    {
+        delete ps;
+    }
+private:
+	std::string *ps;
+	int i;
+```
+
+## Ex13.24
+如果没有定义析构，`ps`所指向的`string`将不会被释放，导致内存泄漏。
+如果没有定义拷贝构造，则只会拷贝指针，不会拷贝指针所指向的内存数据。
+
+## Ex13.27
+```C++
+class HasPtr
+{
+public:
+	//构造函数分配新的string和新的计数器，将计数器置为1
+	HasPtr(const std::string &s = std::string())
+		:ps(new std::string(s)), i(0), use(new std::size_t(1)) {}
+
+	//拷贝构造函数拷贝所有数据成员，并递增计数器
+	HasPtr(const HasPtr &hp)
+		:ps(hp.ps),i(hp.i),use(hp.use)
+	{
+		++*use;
+	}
+
+	HasPtr& operator=(const HasPtr &rhs)
+	{
+		++(*rhs.use);
+		
+		if (--*use == 0)
+		{
+			delete ps;
+			delete use;
+		}
+		
+		ps = rhs.ps;
+		i = rhs.i;
+		use = rhs.use;
+		return *this;
+	}
+	~HasPtr()
+	{
+		if (--*use == 0)
+		{
+			delete ps;
+			delete use;
+		}
+	}
+private:
+	std::string *ps;
+	int i;
+	std::size_t *use;
+};
+```
+
+## Ex11.29
+```
+swap(HasPtr& lhs,HasPtr& rhs)
+{  
+    //该swap内部调用的并不是自己,而是std::swap  
+    //同时这些swap的参数类型也各不相同,证明不是递归调用自己  
+    cout<<"call swap(HasPtr&,HasPtr&)"<<endl;  
+    std::swap(lhs.ps,rhs.ps);  
+    std::swap(lhs.i,rhs.i);  
+    }  
+```
+
+## Ex13.33
+因为我们需要修改Folder中保存的Message
+
+## [Ex13.34](./13_34.h)
+
+## Ex13.35
+单方面的改变了message所指向的文件夹，而文件夹所包含的message没有改变，导致folder和message关系不对应。
+
+## [EX13.36](./13_34.h)
+
+## [EX13.37](./13_34.h)
+
+## Ex13.38
+避免申请内存需要的额外开销
