@@ -7,7 +7,9 @@ using std::endl;
 class StrVec
 {
 public:
-	StrVec() :elements(nullptr), first_free(nullptr), cap(nullptr) {}
+	StrVec() :elements(nullptr), first_free(nullptr), cap(nullptr) {} //默认初始化
+	StrVec(const std::initializer_list<std::string> &li);  //列表初始化
+
 	StrVec(const StrVec &);               //拷贝构造函数
 	StrVec& operator=(const StrVec &);    //拷贝赋值运算符
 	~StrVec();                            //析构函数
