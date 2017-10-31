@@ -21,7 +21,7 @@ x(a) 相当于构造一个临时变量x1, x1 = a,然后把x1传进去。
 如此往复循环。
 
 ## Ex13.4
-```
+```C++
 拷贝构造：
 arg -> local
 global -> heap
@@ -56,7 +56,7 @@ local -> *heap
 三次。*accum  item1  item2.*
 
 ## Ex13.13
-```
+```C++
 #include <iostream>
 #include <vector>
 using namespace std;
