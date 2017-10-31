@@ -348,3 +348,8 @@ swap(HasPtr& lhs,HasPtr& rhs)
 
 ## Ex13.38
 避免申请内存需要的额外开销
+
+## Ex13.39
+[StrVec.h](./StrVec.h)
+
+[StrVec.cpp](./StrVec.cpp)
