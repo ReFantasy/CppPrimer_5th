@@ -8,6 +8,13 @@ StrVec::StrVec(const StrVec &s)
 	cap = first_free = newdata.second;
 }
 
+StrVec::StrVec(const std::initializer_list<std::string> &li)
+	:elements(nullptr), first_free(nullptr), cap(nullptr)
+{
+	for (auto itm : li)
+		push_back(itm);
+}
+
 StrVec& StrVec::operator=(const StrVec &rhs)
 {
 	auto data = alloc_n_copy(rhs.begin(), rhs.end());
