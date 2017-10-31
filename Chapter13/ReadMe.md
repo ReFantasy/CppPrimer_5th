@@ -353,3 +353,14 @@ swap(HasPtr& lhs,HasPtr& rhs)
 [StrVec.h](./StrVec.h)
 
 [StrVec.cpp](./StrVec.cpp)
+
+## Ex13.40
+```C++
+#include "StrVec.h"
+StrVec::StrVec(const std::initializer_list<std::string> &li)
+	:elements(nullptr), first_free(nullptr), cap(nullptr)
+{
+	for (auto itm : li)
+		push_back(itm);
+}
+```
