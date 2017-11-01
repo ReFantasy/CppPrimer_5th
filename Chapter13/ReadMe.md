@@ -369,3 +369,18 @@ StrVec::StrVec(const std::initializer_list<std::string> &li)
 [RFString.h](./RFString.h)
 
 [RFString.cpp](./RFString.cpp)
+
+```C++
+#include <iostream>
+#include "RFString.h"
+using namespace std;
+int main()
+{
+	RFString str1("hello !");
+	RFString str2(str1);
+	cout << str2 << endl;
+	
+	return 0;
+}
+
+```
