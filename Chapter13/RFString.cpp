@@ -21,6 +21,21 @@ RFString::RFString(const char *pchar)
 
 RFString::RFString(const RFString &rf_str):RFString(rf_str.begin){}
 
+RFString& RFString::operator=(const RFString& rhs)
+{
+	auto new_begin = alloc.allocate(rhs.size() + 1);
+	std::uninitialized_copy(rhs.begin, rhs.end, new_begin);
+	//free this
+	for (auto b = begin; b != end; b++)
+		alloc.destroy(b);
+	alloc.deallocate(begin, size() + 1);
+
+	begin = new_begin;
+	end = begin + rhs.size()+1;
+
+	return *this;
+}
+
 size_t RFString::size()const
 {
 	return (end-begin-1);
