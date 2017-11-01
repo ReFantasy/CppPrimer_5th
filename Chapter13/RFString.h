@@ -10,7 +10,7 @@ public:
 	RFString() :begin(nullptr), end(nullptr){}
 	RFString(const char *pchar);
 	RFString(const RFString &rf_str);
-
+	RFString& operator=(const RFString& rhs);
 	size_t size()const;  //返回字符的个数，不包括结束符
 	~RFString();
 private:
