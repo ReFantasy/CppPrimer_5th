@@ -364,3 +364,8 @@ StrVec::StrVec(const std::initializer_list<std::string> &li)
 		push_back(itm);
 }
 ```
+
+## Ex13.44
+[RFString.h](./RFString.h)
+
+[RFString.cpp](./RFString.cpp)
