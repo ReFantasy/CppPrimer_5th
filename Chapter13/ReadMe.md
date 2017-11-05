@@ -400,3 +400,25 @@ int&  r2 = vi[0];
 int& r3 = r1;  //r1现在是右值
 int&& r4 = vi[0] * f();
 ```
+
+## Ex13.57
+```
+class Foo
+{
+public:
+	Foo() = default;
+	Foo(const Foo &) {}
+
+	Foo sorted() const &&
+	{
+		return Foo(*this);
+	}
+	Foo sorted() const & 
+	{ 
+		return Foo(*this).sorted(); //正确
+		/*Foo ret(*this);
+		return ret.sorted();*/
+	}
+};
+
+```
