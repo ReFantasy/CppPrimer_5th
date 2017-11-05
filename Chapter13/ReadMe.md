@@ -402,7 +402,7 @@ int&& r4 = vi[0] * f();
 ```
 
 ## Ex13.57
-```
+```C++
 class Foo
 {
 public:
@@ -420,5 +420,4 @@ public:
 		return ret.sorted();*/
 	}
 };
-
 ```
