@@ -228,3 +228,6 @@ bool operator==(const StrBlob &lhs, const StrBlob &rhs)
 	return ((*lhs.data) == (*rhs.data));
 }
 ```
+
+## Ex14.29
+脑子有坑。。
