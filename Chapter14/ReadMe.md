@@ -246,3 +246,64 @@ public:
 	}
 };
 ```
+
+## Ex14.35
+```C++
+class InputString
+{
+public:
+	InputString(istream &i = cin) :is(i){}
+	string operator()(istream &i = cin)
+	{
+		if (getline(is, s))
+			return s;
+		else
+			return string();
+	}
+private:
+	istream &is;
+	string s;
+};
+```
+
+## Ex14.36
+```C++
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class InputString
+{
+public:
+	InputString(istream &i = cin) :is(i){}
+	string operator()(istream &i = cin)
+	{
+		if (getline(is, s))
+			return s;
+		else
+			return string();
+	}
+private:
+	istream &is;
+	string s;
+};
+
+int main() 
+{
+	
+	InputString input;
+	vector<string> vecstr;
+	string s;
+	while ((s = input()) != string())
+	{
+		vecstr.push_back(std::move(s));
+	}
+
+	cout << "out" << endl;
+	for (auto str : vecstr)
+		cout << str << endl;
+	return 0;
+}
+```
