@@ -231,3 +231,18 @@ bool operator==(const StrBlob &lhs, const StrBlob &rhs)
 
 ## Ex14.29
 脑子有坑。。
+
+## Ex14.34
+```C++
+class ifse
+{
+public:
+	int operator()(bool _bool, int a=1, int b=0)
+	{
+		if (_bool)
+			return a;
+		else
+			return b;
+	}
+};
+```
