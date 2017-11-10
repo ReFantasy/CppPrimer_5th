@@ -432,3 +432,15 @@ struct Integral {
     operator int() const;   // promising that this operator will not change the state of the obj
 };
 ```
+
+## Ex14.50
+```C++
+struct LongDouble {
+    LongDouble(double = 0.0);
+    operator double();
+    operator float();
+};
+LongDouble ldObj;
+int ex1 = ldObj;    // 错误，double和float都可以隐式转换成int
+float ex2 = ldObj;  // 正确
+```
