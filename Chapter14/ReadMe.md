@@ -444,3 +444,36 @@ LongDouble ldObj;
 int ex1 = ldObj;    // 错误，double和float都可以隐式转换成int
 float ex2 = ldObj;  // 正确
 ```
+
+## Ex14.51
+```C++
+struct LongDouble
+{
+	LongDouble(double = 0.0) {}
+	operator double() 
+	{
+		cout << "LongDouble to double" << endl;
+		return 0; 
+	}
+	operator float() 
+	{
+		cout << "LongDouble to float" << endl;
+		return 0; 
+	}
+};
+void cacl(int a)
+{
+	cout << "cacl(int)" << endl;
+}
+void cacl(LongDouble)
+{
+	cout << "cacl(LongDouble)" << endl;
+}
+int main() 
+{
+	double dval = 0.1;
+	cacl(dval);
+	return 0;
+}
+
+```
