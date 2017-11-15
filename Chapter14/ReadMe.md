@@ -477,3 +477,75 @@ int main()
 }
 
 ```
+
+## Ex14.52
+```C++
+#include <iostream>
+#include <set>
+#include <string>
+#include <vector>
+using namespace std;
+
+struct SmallInt
+{
+	SmallInt(int = 0) {}
+	operator int()const
+	{
+		return 0;
+	}
+};
+struct LongDouble
+{
+	LongDouble operator+(const SmallInt&)
+	{
+		cout << "LongDouble inside operator+" << endl;
+		return LongDouble();
+	}
+};
+
+LongDouble operator+(LongDouble & ld, double)
+{
+	cout << "LongDouble outside operator+" << endl;
+	return ld;
+}
+
+
+int main()
+{
+	SmallInt si;
+	LongDouble ld;
+
+	ld = si + ld;  //错误，没有这样的转换
+	ld = ld + si;  //优先LongDouble inside operator+，候选LongDouble outside operator+ 函数外的加法运算符需要把si转换成double
+	return 0;
+}
+
+```
+
+## Ex14.53
+```C++
+struct SmallInt
+{
+	friend SmallInt operator+(const SmallInt&, const SmallInt&);
+
+	SmallInt(int = 0) {}
+	operator int()const
+	{
+		return 0;
+	}
+};
+SmallInt operator+(const SmallInt&, const SmallInt&)
+{
+	cout << "SmallInt outside operator+" << endl;
+	return 0;
+}
+
+int main()
+{
+	SmallInt sl;
+	double d = static_cast<double>(sl) + 3.14;
+	//或者 double d = sl+ SmallInt(3.14);
+	return 0;
+}
+
+```
