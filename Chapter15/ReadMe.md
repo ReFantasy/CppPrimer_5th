@@ -138,6 +138,7 @@ private:
 没必要
 
 ## Ex15.13
+无限递归
 ```C++
 class base {
 public:
@@ -153,7 +154,6 @@ private:
     int i;
 };
 ```
-无限递归
 修改：
 ```C++
 class base {
