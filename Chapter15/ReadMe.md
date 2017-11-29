@@ -79,3 +79,57 @@ private:
 
 ## Ex15.9
 指针或引用时，指针或引用的类型可能和对象的实际类型不同。
+
+## Ex15.11
+```C++
+
+class Quote  //基类 按原价销售
+{
+public:
+	Quote() = default;
+	Quote(const std::string &book, double sales_price)
+		:bookNo(book), price(sales_price) {}
+	std::string isbn()const
+	{
+		return bookNo;
+	}
+
+	//返回给定数量的书籍的销售总额
+	//派生类负责改写并使用不同的折扣计算算法
+	virtual double net_price(std::size_t n)const
+	{
+		return n*price;
+	}
+
+	virtual ~Quote() = default;
+	virtual void debug() const 
+	{
+		cout << "data members:" << endl << "\tbookNo" << bookNo << "\tprice" << price << endl;
+	}
+private:
+	std::string bookNo;  //书籍ISBN编号
+protected:
+	double price = 0.0; //原价
+};
+   
+
+class Bulk_quote :public Quote
+{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+public:
+	Bulk_quote() = default;
+	Bulk_quote(const std::string &, double, std::size_t, double)
+	{
+		;
+	}
+	//覆盖基类的函数版本以实现基于大量购买的折扣政策
+	double net_price(std::size_t cnt)const override;
+	void debug()const override
+	{
+		Quote::debug();
+		cout << "data members:" << endl << "\tmin_qty" << min_qty << "\tdiscount" << discount << endl;
+	}
+private:
+	std::size_t min_qty = 0;
+	double discount = 0.0;
+};
+```
