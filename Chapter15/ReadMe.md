@@ -133,3 +133,40 @@ private:
 	double discount = 0.0;
 };
 ```
+
+## Ex15.12
+没必要
+
+## Ex15.13
+```C++
+class base {
+public:
+    string name() { return basename; }
+    virtual void print(ostream &os) { os << basename; }
+private:
+    string basename;
+};
+class derived : public base {
+public:
+    void print(ostream &os) { print(os); os << " " << i; }
+private:
+    int i;
+};
+```
+无限递归
+修改：
+```C++
+class base {
+public:
+    string name() { return basename; }
+    virtual void print(ostream &os) { os << basename; }
+private:
+    string basename;
+};
+class derived : public base {
+public:
+    void print(ostream &os) { base::print(os); os << " " << i; }
+private:
+    int i;
+};
+```
