@@ -13,3 +13,11 @@ private:
   
 protected:
   派生类有权访问，禁止其它用户访问。
+
+## Ex15.4
+```C++
+class Base { ... };
+(a) class Derived : public Derived { ... }; //错误，不能继承自身
+(b) class Derived : private Base { ... };  //不是声明，是定义
+(c) class Derived : public Base;  //错误，声明中不能出现派生列表
+```
