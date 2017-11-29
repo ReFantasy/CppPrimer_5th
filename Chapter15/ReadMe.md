@@ -21,3 +21,54 @@ class Base { ... };
 (b) class Derived : private Base { ... };  //不是声明，是定义
 (c) class Derived : public Base;  //错误，声明中不能出现派生列表
 ```
+
+## Ex15.7
+```C++
+class Quote  //基类 按原价销售
+{
+public:
+	Quote() = default;
+	Quote(const std::string &book, double sales_price)
+		:bookNo(book), price(sales_price) {}
+	std::string isbn()const
+	{
+		return bookNo;
+	}
+
+	//返回给定数量的书籍的销售总额
+	//派生类负责改写并使用不同的折扣计算算法
+	virtual double net_price(std::size_t n)const
+	{
+		return n*price;
+	}
+
+	virtual ~Quote() = default;
+private:
+	std::string bookNo;  //书籍ISBN编号
+protected:
+	double price = 0.0; //原价
+};
+
+class MaxQty_quote :public Quote
+{
+public:
+	MaxQty_quote() = default;
+	MaxQty_quote(const std::string &book, double sales_price, std::size_t maxqty, double mdiscount)
+		:Quote(book, sales_price), max_qty(max_qty), discount(mdiscount) {}
+	double net_price(std::size_t cnt)const override
+	{
+		if (cnt <= max_qty)
+		{
+			return cnt*(1 - discount)*price;
+		}
+		else
+		{
+			return (cnt-max_qty)*price+ max_qty*(1 - discount)*price;
+		}
+	}
+private:
+	std::size_t max_qty = 0;
+	double discount = 0.0;
+
+};
+```
