@@ -39,3 +39,16 @@ int main()
 	cout << *iter << endl;
 }
 ```
+
+## Ex16.5
+打印数组
+```C++
+template<size_t N, typename T>
+void print(const T (&t)[N])
+{
+	for (size_t i = 0; i < N; i++)
+	{
+		cout << t[i] << endl;
+	}
+}
+```
