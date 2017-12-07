@@ -4,7 +4,7 @@
 
 *EX为题号，灰色阴影部分为答案，其余为题目或其它说明*
 
-## Ex16.1
+## Ex16.2
 ```C++
 template <typename T>
 int compare(T a, T b)
@@ -17,7 +17,7 @@ int compare(T a, T b)
 	return 0;
 }
 ```
-## Ex16.2
+## Ex16.4
 ```C++
 template <typename ITERATOR, typename VALUE>
 ITERATOR myFind(const ITERATOR begin, const ITERATOR end, const VALUE v)
