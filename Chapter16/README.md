@@ -52,3 +52,29 @@ void print(const T (&t)[N])
 	}
 }
 ```
+
+## Ex16.6
+```C++
+
+template<size_t N, typename T>
+const T* mybegin(const T (&t)[N])
+{
+	return &t[0];
+}
+
+template<size_t N, typename T>
+const T* myend(const T (&t)[N])
+{
+	return &t[N];
+}
+
+int main()
+{
+	string str[] = { "1", "cust", "hello", "ball" };
+	int vi[] = { 1,5,7,9,2 };
+	for (auto iter = mybegin(str); iter != myend(str); iter++)
+	{
+		cout << *iter << endl;
+	}
+}
+```
