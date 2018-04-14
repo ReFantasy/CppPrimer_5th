@@ -7,8 +7,8 @@
 class Person
 {
 public:
-    string getName() const { return name; }
-    string getAddress() const { return address; }
+    string GetName() const { return name; }
+    string GetAddress() const { return address; }
 public:
     std::string name;
     std::string address;
