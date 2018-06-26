@@ -192,7 +192,7 @@ int main(int argc, char *argv[])
 ```
 
 ## Ex6.55 && Ex6.56
-```C++
+```c++
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -226,3 +226,36 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+
+## Ex6.36
+
+`string(&f())[10]; // 返回对十个string元素的数组的引用`
+
+## Ex6.67
+
+```C++
+// 类型别名
+using RefStringArry = string[10];
+RefStringArry& func_ref();
+
+// 尾置返回类型
+auto func_endret()->string(&)[10];
+
+// decltype
+string str[10];
+decltype(str)& func_decltype()[10]);
+```
+
+## Ex6.38
+
+```
+int odd[]={1,3,5,7,9};
+int even[]={0,2,4,6,8};
+decltype(odd)& arrRef(int i)
+{
+    return (i%2) ? odd : even;
+}
+```
+
+
+
