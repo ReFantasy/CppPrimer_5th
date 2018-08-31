@@ -22,31 +22,7 @@ int compare(const T &a, const T &b,F f = F())
 ```
 
 ## Ex16.3
-找不到比较数据类型的`<`操作
-
-
-## Ex16.4
-```C++
-template <typename ITERATOR, typename VALUE>
-ITERATOR myFind(const ITERATOR begin, const ITERATOR end, const VALUE v)
-{
-	auto b = begin, e = end;
-	for (; b != e; b++)
-	{
-		if (*b == v)
-			return b;
-	}
-
-	return end;
-}
-
-int main()
-{
-	vector<int> a({ 1,5,7,9,18, 20 });
-	auto iter = myFind<decltype(a.begin()), int>(a.begin(), a.end(), 5);
-	cout << *iter << endl;
-}
-```
+找不到数据类型的`<`操作
 
 ## Ex16.4
 ```C++
@@ -99,5 +75,7 @@ constexpr int GetArraySize(T(&ary)[N])
 {
 	return N;
 }
-
 ```
+
+## Ex16.8
+大部分标准库类型定义了`==`和`!=`操作（可能没有定义`<`操作）
