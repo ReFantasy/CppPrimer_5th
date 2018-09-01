@@ -141,7 +141,17 @@ void DebugDelete(T *t)
 
 `template class vector<Sales_data>` 定义一个模板实例
 
-## Ex16.25
+## Ex16.26
 可以。
 
 因为模板只在使用的时候才会实例化。vector的默认初始化没有任何元素，也就不需要使用NoDefault的默认构造函数。
+
+## Ex16.27
+```C++
+(a) No instantiation, compiles, it got instantiated when called.
+(b) No instantiation, compiles, references and pointers doesn't need instantiation
+(c) Instantiation. Doesn't compile!
+(d) No instantiation, compiles, references and pointers doesn't need instantiation
+(e) Instantiation of Stack<char>. Doesn't compile!
+(f) Instantiation of Stack<std::string>. Doesn't compileNo instantiation, compiles, references and pointers doesn't need instantiation!
+```
