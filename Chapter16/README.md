@@ -138,4 +138,10 @@ void DebugDelete(T *t)
 
 ## Ex16.25
 `extern template class vector<string>` 声明一个模板实例
+
 `template class vector<Sales_data>` 定义一个模板实例
+
+## Ex16.25
+可以。
+
+因为模板只在使用的时候才会实例化。vector的默认初始化没有任何元素，也就不需要使用NoDefault的默认构造函数。
