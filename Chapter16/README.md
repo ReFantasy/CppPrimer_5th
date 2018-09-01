@@ -126,3 +126,16 @@ void f(Iterator b, Iterator e)
 	}
 }
 ```
+
+## Ex16.21
+```C++
+template<typename T>
+void DebugDelete(T *t)
+{
+	delete t;
+}
+```
+
+## Ex16.25
+`extern template class vector<string>` 声明一个模板实例
+`template class vector<Sales_data>` 定义一个模板实例
